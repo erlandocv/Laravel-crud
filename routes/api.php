@@ -20,6 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('blogposts', 'BlogPostController@index'); 
 Route::get('blogpost/{id}', 'BlogPostController@show');  
 Route::post('blogpost', 'BlogPostController@store'); 
-Route::put('blogpost', 'BlogPostController@store'); 
-Route::delete('blogpost/{id}', 'BlogPostController@store');
+Route::put('blogpost/{id}', 'BlogPostController@store'); 
+Route::delete('blogpost/{id}', 'BlogPostController@destroy');
 

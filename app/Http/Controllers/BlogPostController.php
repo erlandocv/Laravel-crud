@@ -16,19 +16,10 @@ class BlogPostController extends Controller
      */
     public function index()
     {
-        $blogPosts = BlogPost::paginate(10);
+        $blogPosts = BlogPost::paginate(5);
         return BlogPostResource::collection($blogPosts);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -38,7 +29,18 @@ class BlogPostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $blogPost = $request->isMethod('put') ? BlogPost::findOrFail
+        ($request->blogpost_id) : new BlogPost;
+
+        $blogPost->id = $request->input('blogpost_id');
+        $blogPost->title = $request->input('title');
+        $blogPost->body = $request->input('body');
+
+        if($blogPost->save()) {
+            return new BlogPostResource($blogPost);
+        }
+
+        
     }
 
     /**
@@ -49,30 +51,8 @@ class BlogPostController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+        $blogPost = blogPost::findOrFail($id);
+        return new blogPostResource($blogPost);
     }
 
     /**
@@ -83,6 +63,11 @@ class BlogPostController extends Controller
      */
     public function destroy($id)
     {
-        //
-    }
+        $blogPost = BlogPost::findOrFail($id);
+        
+        if($blogPost->delete()) {
+
+            return new blogPostResource($blogPost);
+        }
+        }
 }
