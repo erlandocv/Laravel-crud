@@ -37,7 +37,7 @@ class BlogPostController extends Controller
         $blogPost->body = $request->input('body');
 
         if($blogPost->save()) {
-            return new BlogPostResource($blogPost);
+            return new blogPostResource($blogPost);
         }
 
         
