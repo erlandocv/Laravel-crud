@@ -9,3 +9,9 @@ This page is used to display posts from DB, with no ability to modify/delete the
 ## Admin page
 
 This page is used to display posts from DB, as if the user has admin rights. The User can delete, update & post here.
+
+## How to run
+
+1. composer install
+2. npm install
+3. php artisan serve
