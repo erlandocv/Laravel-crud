@@ -6,7 +6,7 @@
       </v-container>
     </v-content>
 
-    <v-bottom-navigation :value="activeBtn" color="deep-purple" horizontal dark>
+    <v-bottom-navigation horizontal dark>
       <router-link to="/1" tag="v-btn">
         <v-btn>
           <span>Home</span>

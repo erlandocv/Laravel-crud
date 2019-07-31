@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <H1>admin</H1>
-  </div>
+  <div>admin</div>
 </template>
 <script>
 export default {

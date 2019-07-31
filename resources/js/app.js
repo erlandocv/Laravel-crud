@@ -14,9 +14,7 @@ const app = new Vue({
     render: h => h(App),
     vuetify: new Vuetify(),
     data() {
-        return {
-            activeBtn: 1
-        };
+        return {};
     }
 });
 

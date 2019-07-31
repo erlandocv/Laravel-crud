@@ -1722,8 +1722,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "app",
   created: function created() {
@@ -37788,7 +37786,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("H1", [_vm._v("admin")])], 1)
+  return _c("div", [_vm._v("admin")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -37812,7 +37810,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", [_vm._v("HOME")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -37847,14 +37845,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-bottom-navigation",
-        {
-          attrs: {
-            value: _vm.activeBtn,
-            color: "deep-purple",
-            horizontal: "",
-            dark: ""
-          }
-        },
+        { attrs: { horizontal: "", dark: "" } },
         [
           _c(
             "router-link",
@@ -88895,9 +88886,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   },
   vuetify: new vuetify__WEBPACK_IMPORTED_MODULE_1___default.a(),
   data: function data() {
-    return {
-      activeBtn: 1
-    };
+    return {};
   }
 });
 /* harmony default export */ __webpack_exports__["default"] = (app);
