@@ -23,7 +23,9 @@
     "vue": "^2.5.17"
   },
   "dependencies": {
+    "material-icons": "^0.3.1",
     "vue-router": "^3.0.7",
+    "vue-template-compiler": "^2.6.10",
     "vuetify": "^2.0.3"
   }
 }

@@ -1384,7 +1384,7 @@ module.exports = function spread(callback) {
 
 
 var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
-var isBuffer = __webpack_require__(/*! is-buffer */ "./node_modules/axios/node_modules/is-buffer/index.js");
+var isBuffer = __webpack_require__(/*! is-buffer */ "./node_modules/is-buffer/index.js");
 
 /*global toString:true*/
 
@@ -1688,28 +1688,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/axios/node_modules/is-buffer/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/axios/node_modules/is-buffer/index.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-module.exports = function isBuffer (obj) {
-  return obj != null && obj.constructor != null &&
-    typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/admin.vue?vue&type=script&lang=js& ***!
@@ -1805,7 +1783,7 @@ __webpack_require__.r(__webpack_exports__);
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-   true ? factory(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/umd/popper.js")) :
+   true ? factory(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")) :
   undefined;
 }(this, function (exports, $, Popper) { 'use strict';
 
@@ -6250,7 +6228,7 @@ exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"Material Icons\";\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + escape(__webpack_require__(/*! ./MaterialIcons-Regular.eot */ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.eot")) + ");\n  /* For IE6-8 */\n  src: local(\"Material Icons\"), local(\"MaterialIcons-Regular\"), url(" + escape(__webpack_require__(/*! ./MaterialIcons-Regular.woff2 */ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ./MaterialIcons-Regular.woff */ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.woff")) + ") format(\"woff\"), url(" + escape(__webpack_require__(/*! ./MaterialIcons-Regular.ttf */ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.ttf")) + ") format(\"truetype\");\n}\n\n.material-icons {\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 24px;\n  display: inline-block;\n  line-height: 1;\n  text-transform: none;\n  letter-spacing: normal;\n  word-wrap: normal;\n  white-space: nowrap;\n  direction: ltr;\n  /* Support for all WebKit browsers. */\n  -webkit-font-smoothing: antialiased;\n  /* Support for Safari and Chrome. */\n  text-rendering: optimizeLegibility;\n  /* Support for Firefox. */\n  -moz-osx-font-smoothing: grayscale;\n  /* Support for IE. */\n  -webkit-font-feature-settings: 'liga';\n          font-feature-settings: 'liga';\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"Material Icons\";\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + escape(__webpack_require__(/*! ./MaterialIcons-Regular.eot */ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.eot")) + ");\n  /* For IE6-8 */\n  src: local(\"Material Icons\"), local(\"MaterialIcons-Regular\"), url(" + escape(__webpack_require__(/*! ./MaterialIcons-Regular.woff2 */ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ./MaterialIcons-Regular.woff */ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.woff")) + ") format(\"woff\"), url(" + escape(__webpack_require__(/*! ./MaterialIcons-Regular.ttf */ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.ttf")) + ") format(\"truetype\");\n}\n\n.material-icons {\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 24px;\n  display: inline-block;\n  line-height: 1;\n  text-transform: none;\n  letter-spacing: normal;\n  word-wrap: normal;\n  white-space: nowrap;\n  direction: ltr;\n  /* Support for all WebKit browsers. */\n  -webkit-font-smoothing: antialiased;\n  /* Support for Safari and Chrome. */\n  text-rendering: optimizeLegibility;\n  /* Support for Firefox. */\n  -moz-osx-font-smoothing: grayscale;\n  /* Support for IE. */\n  font-feature-settings: 'liga';\n}\n", ""]);
 
 // exports
 
@@ -6366,6 +6344,28 @@ module.exports = function escape(url) {
     }
 
     return url
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/is-buffer/index.js":
+/*!*****************************************!*\
+  !*** ./node_modules/is-buffer/index.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+module.exports = function isBuffer (obj) {
+  return obj != null && obj.constructor != null &&
+    typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
 }
 
 
@@ -34171,13 +34171,15 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/popper.js/dist/umd/popper.js":
+/***/ "./node_modules/popper.js/dist/esm/popper.js":
 /*!***************************************************!*\
-  !*** ./node_modules/popper.js/dist/umd/popper.js ***!
+  !*** ./node_modules/popper.js/dist/esm/popper.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
  * @version 1.15.0
@@ -34202,11 +34204,6 @@ if(false) {}
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-(function (global, factory) {
-	 true ? module.exports = factory() :
-	undefined;
-}(this, (function () { 'use strict';
-
 var isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined';
 
 var longerTimeoutBrowsers = ['Edge', 'Trident', 'Firefox'];
@@ -36785,9 +36782,7 @@ Popper.Utils = (typeof window !== 'undefined' ? window : global).PopperUtils;
 Popper.placements = placements;
 Popper.Defaults = Defaults;
 
-return Popper;
-
-})));
+/* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
@@ -55884,8 +55879,7 @@ var __spread = undefined && undefined.__spread || function () {
       return this.$createElement(_VBtn__WEBPACK_IMPORTED_MODULE_1__["default"], {
         props: {
           color: color,
-          fab: !hasMonth,
-          rounded: hasMonth,
+          fab: true,
           depressed: true,
           small: true
         },
@@ -56103,10 +56097,11 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _calendar_with_events_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calendar-with-events.sass */ "./src/components/VCalendar/mixins/calendar-with-events.sass");
 /* harmony import */ var _calendar_with_events_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_calendar_with_events_sass__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _calendar_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./calendar-base */ "./src/components/VCalendar/mixins/calendar-base.ts");
-/* harmony import */ var _util_props__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/props */ "./src/components/VCalendar/util/props.ts");
-/* harmony import */ var _util_timestamp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../util/timestamp */ "./src/components/VCalendar/util/timestamp.ts");
-/* harmony import */ var _util_events__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../util/events */ "./src/components/VCalendar/util/events.ts");
+/* harmony import */ var _directives_ripple__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../directives/ripple */ "./src/directives/ripple/index.ts");
+/* harmony import */ var _calendar_base__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./calendar-base */ "./src/components/VCalendar/mixins/calendar-base.ts");
+/* harmony import */ var _util_props__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../util/props */ "./src/components/VCalendar/util/props.ts");
+/* harmony import */ var _util_timestamp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../util/timestamp */ "./src/components/VCalendar/util/timestamp.ts");
+/* harmony import */ var _util_events__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../util/events */ "./src/components/VCalendar/util/events.ts");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -56124,6 +56119,8 @@ var __assign = undefined && undefined.__assign || function () {
 }; // Styles
 
 
+ // Directives
+
  // Mixins
 
  // Util
@@ -56133,9 +56130,12 @@ var __assign = undefined && undefined.__assign || function () {
 
 /* @vue/component */
 
-/* harmony default export */ __webpack_exports__["default"] = (_calendar_base__WEBPACK_IMPORTED_MODULE_1__["default"].extend({
+/* harmony default export */ __webpack_exports__["default"] = (_calendar_base__WEBPACK_IMPORTED_MODULE_2__["default"].extend({
   name: 'calendar-with-events',
-  props: _util_props__WEBPACK_IMPORTED_MODULE_2__["default"].events,
+  directives: {
+    ripple: _directives_ripple__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  props: _util_props__WEBPACK_IMPORTED_MODULE_3__["default"].events,
   computed: {
     noEvents: function noEvents() {
       return this.events.length === 0;
@@ -56144,7 +56144,7 @@ var __assign = undefined && undefined.__assign || function () {
       var _this = this;
 
       return this.events.map(function (input, index) {
-        return Object(_util_events__WEBPACK_IMPORTED_MODULE_4__["parseEvent"])(input, index, _this.eventStart, _this.eventEnd);
+        return Object(_util_events__WEBPACK_IMPORTED_MODULE_5__["parseEvent"])(input, index, _this.eventStart, _this.eventEnd);
       });
     },
     eventColorFunction: function eventColorFunction() {
@@ -56283,7 +56283,7 @@ var __assign = undefined && undefined.__assign || function () {
       var eventMarginBottom = this.eventMarginBottom;
       var relativeOffset = (offset - index) * (eventHeight + eventMarginBottom); // 1 = margin bottom
 
-      var dayIdentifier = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_3__["getDayIdentifier"])(day);
+      var dayIdentifier = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_4__["getDayIdentifier"])(day);
       var start = dayIdentifier === event.startIdentifier;
       var end = dayIdentifier === event.endIdentifier;
       var scope = {
@@ -56319,7 +56319,7 @@ var __assign = undefined && undefined.__assign || function () {
           event = _a.event,
           columnCount = _a.columnCount,
           column = _a.column;
-      var dayIdentifier = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_3__["getDayIdentifier"])(day);
+      var dayIdentifier = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_4__["getDayIdentifier"])(day);
       var start = event.startIdentifier >= dayIdentifier;
       var end = event.endIdentifier > dayIdentifier;
       var top = start ? day.timeToY(event.start) : 0;
@@ -56395,37 +56395,37 @@ var __assign = undefined && undefined.__assign || function () {
       });
     },
     getEventsForDay: function getEventsForDay(day) {
-      var identifier = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_3__["getDayIdentifier"])(day);
+      var identifier = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_4__["getDayIdentifier"])(day);
       return this.parsedEvents.filter(function (event) {
-        return Object(_util_events__WEBPACK_IMPORTED_MODULE_4__["isEventOn"])(event, identifier);
+        return Object(_util_events__WEBPACK_IMPORTED_MODULE_5__["isEventOn"])(event, identifier);
       });
     },
     getEventsForDayAll: function getEventsForDayAll(day) {
-      var identifier = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_3__["getDayIdentifier"])(day);
+      var identifier = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_4__["getDayIdentifier"])(day);
       return this.parsedEvents.filter(function (event) {
-        return event.allDay && Object(_util_events__WEBPACK_IMPORTED_MODULE_4__["isEventOn"])(event, identifier);
+        return event.allDay && Object(_util_events__WEBPACK_IMPORTED_MODULE_5__["isEventOn"])(event, identifier);
       });
     },
     getEventsForDayTimed: function getEventsForDayTimed(day) {
-      var identifier = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_3__["getDayIdentifier"])(day);
+      var identifier = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_4__["getDayIdentifier"])(day);
       return this.parsedEvents.filter(function (event) {
-        return !event.allDay && Object(_util_events__WEBPACK_IMPORTED_MODULE_4__["isEventOn"])(event, identifier);
+        return !event.allDay && Object(_util_events__WEBPACK_IMPORTED_MODULE_5__["isEventOn"])(event, identifier);
       });
     },
     isSameColumn: function isSameColumn(a, b) {
-      var astart = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_3__["parseTime"])(a.event.start);
-      var bstart = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_3__["parseTime"])(b.event.start);
+      var astart = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_4__["parseTime"])(a.event.start);
+      var bstart = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_4__["parseTime"])(b.event.start);
       var diff = astart - bstart;
       var abs = diff < 0 ? -diff : diff;
       return abs < this.eventOverlapThreshold;
     },
     isOverlapping: function isOverlapping(a, b) {
-      var astart = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_3__["parseTime"])(a.event.start);
-      var bstart = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_3__["parseTime"])(b.event.start);
+      var astart = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_4__["parseTime"])(a.event.start);
+      var bstart = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_4__["parseTime"])(b.event.start);
 
       if (a.offset < b.offset && bstart < astart) {
         var aend = astart + this.eventOverlapThreshold;
-        var bend = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_3__["parseTime"])(b.event.end);
+        var bend = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_4__["parseTime"])(b.event.end);
         return !(astart >= bend || aend <= bstart);
       }
 
@@ -56996,8 +56996,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     end: {
       type: String,
-      validate: _timestamp__WEBPACK_IMPORTED_MODULE_0__["validateTimestamp"],
-      default: '0000-00-00'
+      validate: _timestamp__WEBPACK_IMPORTED_MODULE_0__["validateTimestamp"]
     },
     weekdays: {
       type: Array,
@@ -63010,6 +63009,7 @@ var __assign = undefined && undefined.__assign || function () {
     },
     genSortIcon: function genSortIcon() {
       return this.$createElement(_VIcon__WEBPACK_IMPORTED_MODULE_0__["default"], {
+        staticClass: 'v-data-table-header__icon',
         props: {
           size: 18
         }
@@ -65856,7 +65856,14 @@ var __spread = undefined && undefined.__spread || function () {
     onInput: function onInput(e) {
       var files = __spread(e.target.files || []);
 
-      this.internalValue = this.isMultiple ? files : files[0];
+      this.internalValue = this.isMultiple ? files : files[0]; // Set initialValue here otherwise isFocused
+      // watcher in VTextField will emit a change
+      // event whenever the component is blurred
+
+      this.initialValue = this.internalValue;
+    },
+    onKeyDown: function onKeyDown(e) {
+      this.$emit('keydown', e);
     },
     truncateText: function truncateText(str) {
       if (str.length < Number(this.truncateLength)) return str;
@@ -72500,7 +72507,7 @@ var defaultMenuProps = {
   closeOnContentClick: false,
   disableKeys: true,
   openOnClick: false,
-  maxHeight: 300
+  maxHeight: 304
 };
 var baseMixins = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_11__["default"])(_VTextField_VTextField__WEBPACK_IMPORTED_MODULE_5__["default"], _mixins_comparable__WEBPACK_IMPORTED_MODULE_6__["default"], _mixins_filterable__WEBPACK_IMPORTED_MODULE_7__["default"]);
 /* @vue/component */
@@ -73916,12 +73923,21 @@ var BaseSlideGroup = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_6__["default"]
       var maxScrollOffset = content.clientWidth - wrapper.clientWidth;
       content.style.setProperty('transition', null);
       content.style.setProperty('willChange', null);
-      /* istanbul ignore else */
 
-      if (this.scrollOffset < 0 || !this.isOverflowing) {
-        this.scrollOffset = 0;
-      } else if (this.scrollOffset >= maxScrollOffset) {
-        this.scrollOffset = maxScrollOffset;
+      if (this.$vuetify.rtl) {
+        /* istanbul ignore else */
+        if (this.scrollOffset > 0 || !this.isOverflowing) {
+          this.scrollOffset = 0;
+        } else if (this.scrollOffset <= -maxScrollOffset) {
+          this.scrollOffset = -maxScrollOffset;
+        }
+      } else {
+        /* istanbul ignore else */
+        if (this.scrollOffset < 0 || !this.isOverflowing) {
+          this.scrollOffset = 0;
+        } else if (this.scrollOffset >= maxScrollOffset) {
+          this.scrollOffset = maxScrollOffset;
+        }
       }
     },
     overflowCheck: function overflowCheck(e, fn) {
@@ -80385,7 +80401,8 @@ var __assign = undefined && undefined.__assign || function () {
         staticClass: "v-window__" + direction
       }, [this.$createElement(_VBtn__WEBPACK_IMPORTED_MODULE_1__["default"], {
         props: {
-          icon: true
+          icon: true,
+          small: true
         },
         attrs: {
           'aria-label': this.$vuetify.lang.t("$vuetify.carousel." + direction)
@@ -80398,7 +80415,7 @@ var __assign = undefined && undefined.__assign || function () {
         }
       }, [this.$createElement(_VIcon__WEBPACK_IMPORTED_MODULE_2__["default"], {
         props: {
-          size: 40
+          large: true
         }
       }, icon)])]);
     },
@@ -82021,7 +82038,7 @@ function () {
 
   Vuetify.install = _install__WEBPACK_IMPORTED_MODULE_0__["install"];
   Vuetify.installed = false;
-  Vuetify.version = "2.0.3";
+  Vuetify.version = "2.0.4";
   return Vuetify;
 }();
 
@@ -82859,7 +82876,7 @@ function searchChildren(children) {
     getClickableDependentElements: function getClickableDependentElements() {
       var result = [this.$el];
       if (this.$refs.content) result.push(this.$refs.content);
-      if (this.overlay) result.push(this.overlay);
+      if (this.overlay) result.push(this.overlay.$el);
       result.push.apply(result, __spread(this.getOpenDependentElements()));
       return result;
     }
@@ -86102,7 +86119,7 @@ var icons = {
   menu: 'fa fa-bars',
   subgroup: 'fa fa-caret-down',
   dropdown: 'fa fa-caret-down',
-  radioOn: 'fa fa-dot-circle',
+  radioOn: 'fa fa-dot-circle-o',
   radioOff: 'fa fa-circle-o',
   edit: 'fa fa-pencil',
   ratingEmpty: 'fa fa-star-o',
@@ -86655,10 +86672,10 @@ function (_super) {
     if (this.disabled) return;
     /* istanbul ignore else */
 
-    if (ssrContext) {
-      this.initSSR(ssrContext);
-    } else if (root.$isServer && root.$meta) {
+    if (root.$meta) {
       this.initVueMeta(root);
+    } else if (ssrContext) {
+      this.initSSR(ssrContext);
     }
 
     this.initTheme();
@@ -86716,15 +86733,19 @@ function (_super) {
   };
 
   Theme.prototype.initVueMeta = function (root) {
+    var _this = this;
+
     var options = this.options || {};
     root.$children.push(new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
-      head: {
-        style: [{
-          cssText: this.generatedStyles,
-          type: 'text/css',
-          id: 'vuetify-theme-stylesheet',
-          nonce: options.cspNonce
-        }]
+      head: function head() {
+        return {
+          style: [{
+            cssText: _this.generatedStyles,
+            type: 'text/css',
+            id: 'vuetify-theme-stylesheet',
+            nonce: options.cspNonce
+          }]
+        };
       }
     }));
   };
@@ -88909,7 +88930,7 @@ window._ = __webpack_require__(/*! material-icons */ "./node_modules/material-ic
  */
 
 try {
-  window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/umd/popper.js")["default"];
+  window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")["default"];
   window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
@@ -89212,8 +89233,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /mnt/c/Users/Pop_OS/Documents/web/blog/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /mnt/c/Users/Pop_OS/Documents/web/blog/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/erlandaszelvys/Documents/Laravel-crud/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/erlandaszelvys/Documents/Laravel-crud/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
